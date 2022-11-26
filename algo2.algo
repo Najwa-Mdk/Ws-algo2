@@ -1,0 +1,20 @@
+
+ALGORITHM search_array
+VAR
+   tab1 , tab2: ARRAY_OF INTEGER[10]; 
+   i,j, : INTEGER
+   sum : INTEGER := 0;
+
+BEGIN
+  FOR i FROM 0 TO tab1.length-1 step 1 DO  
+  FOR j FROM 0 TO tab2.length-1 step 1 DO  
+ 
+  IF (tab2[j][i] = tab1[i][j]) THEN
+           BREAK; 
+       sum := tab1[i][j] + tab2[j][i]   
+  END_IF
+  END_FOR
+  END_FOR
+   
+   write (sum)
+END
